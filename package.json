@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://SAMAR106.github.io/Samarjith.M-portfolio.io",
+  "homepage": "https://SAMAR106.github.io/SamarjithM-portfolio-io",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node -e \"require('fs').copyFileSync('dist/index.html', 'dist/404.html')\"",

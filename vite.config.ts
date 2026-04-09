@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Samarjith.M-portfolio.io/",
+  base: "/SamarjithM-portfolio-io/",
   publicDir: "public",
   server: {
     host: "::",
