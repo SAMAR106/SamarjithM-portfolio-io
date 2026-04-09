@@ -1,0 +1,11 @@
+{
+  "homepage": "https://YOUR-USERNAME.github.io/samarjith-portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}

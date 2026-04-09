@@ -1,0 +1,579 @@
+/**
+ * CSS Configuration File
+ * Converted from: tailwind.config.lov.json
+ * Generated Date: 2026-04-09
+ * Purpose: Central CSS variables and theme configuration
+ */
+
+/* ============================================
+   1. ROOT VARIABLES & THEME DEFINITION
+   ============================================ */
+
+:root {
+  /* Color System - Primary Colors */
+  --color-primary: #00d696;
+  --color-primary-opacity-10: rgba(0, 214, 150, 0.1);
+  --color-primary-opacity-20: rgba(0, 214, 150, 0.2);
+  --color-primary-opacity-30: rgba(0, 214, 150, 0.3);
+  --color-primary-opacity-40: rgba(0, 214, 150, 0.4);
+
+  /* Color System - Accent Colors */
+  --color-accent: #a855f7;
+  --color-accent-opacity-10: rgba(168, 85, 247, 0.1);
+  --color-accent-opacity-20: rgba(168, 85, 247, 0.2);
+  --color-accent-opacity-30: rgba(168, 85, 247, 0.3);
+
+  /* Color System - Slate */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Color System - Gray */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  /* Color System - Zinc */
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  /* Background & Foreground */
+  --bg-primary: #0f0f1e;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --fg-primary: #ffffff;
+  --fg-secondary: #e0e0e0;
+  --fg-tertiary: #a0a0a0;
+
+  /* Border Colors */
+  --border-primary: #2d2d3d;
+  --border-secondary: #3a3a4a;
+  --border-light: #4a4a5a;
+
+  /* Spacing System */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Typography */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Monaco', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Shadow System */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* Glow Effects */
+  --glow-primary: 0 0 40px -8px hsl(165 80% 50% / 0.5);
+  --glow-primary-md: 0 0 60px -5px hsl(165 80% 50% / 0.6);
+  --glow-primary-lg: 0 0 80px -2px hsl(165 80% 50% / 0.7);
+  
+  --glow-accent: 0 0 40px -8px hsl(280 70% 60% / 0.45);
+  --glow-accent-md: 0 0 60px -5px hsl(280 70% 60% / 0.55);
+  --glow-accent-lg: 0 0 80px -2px hsl(280 70% 60% / 0.65);
+
+  /* Transitions */
+  --duration-fast: 100ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+
+  --timing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --timing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --timing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-ease-linear: linear;
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   2. RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 640px) {
+  :root {
+    --text-4xl: 1.875rem;
+    --text-5xl: 2.25rem;
+    --text-6xl: 2.5rem;
+    --text-7xl: 3rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --text-6xl: 3.5rem;
+    --text-7xl: 4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+  }
+}
+
+/* ============================================
+   3. GLASS MORPHISM COMPONENTS
+   ============================================ */
+
+.glass-base {
+  backdrop-filter: blur(16px);
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.7),
+    rgba(26, 26, 35, 0.5)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-hover {
+  transition: all var(--duration-base) var(--timing-ease-in-out);
+}
+
+.glass-hover:hover {
+  border-color: rgba(0, 214, 150, 0.35);
+  box-shadow: 
+    0 12px 48px -8px rgba(0, 210, 150, 0.2),
+    0 0 30px -5px rgba(0, 210, 150, 0.15),
+    0 0 60px -10px var(--glow-primary);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   4. GLOW EFFECT CLASSES
+   ============================================ */
+
+.glow-primary {
+  box-shadow: 
+    var(--glow-primary),
+    0 0 80px -16px hsl(165 80% 50% / 0.25),
+    0 0 120px -20px hsl(165 80% 50% / 0.1);
+  animation: pulse-glow-primary 3s ease-in-out infinite;
+}
+
+.glow-primary-sm {
+  box-shadow: 
+    0 0 25px -5px hsl(165 80% 50% / 0.4),
+    0 0 50px -10px hsl(165 80% 50% / 0.15);
+}
+
+.glow-accent {
+  box-shadow: 
+    var(--glow-accent),
+    0 0 80px -16px hsl(280 70% 60% / 0.2),
+    0 0 120px -20px hsl(280 70% 60% / 0.08);
+  animation: pulse-glow-accent 3s ease-in-out infinite;
+}
+
+.glow-accent-sm {
+  box-shadow: 
+    0 0 25px -5px hsl(280 70% 60% / 0.35),
+    0 0 50px -10px hsl(280 70% 60% / 0.12);
+}
+
+/* ============================================
+   5. TEXT EFFECTS
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(165 80% 50%), hsl(280 70% 60%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px hsl(165 80% 50% / 0.2));
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 10px hsl(165 80% 50% / 0.8),
+    0 0 20px hsl(165 80% 50% / 0.6),
+    0 0 30px hsl(280 70% 60% / 0.4),
+    0 0 40px hsl(280 70% 60% / 0.2);
+  animation: neon-flicker 3s ease-in-out infinite;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px hsl(165 80% 50% / 0.3);
+  color: transparent;
+}
+
+/* ============================================
+   6. BORDER EFFECTS
+   ============================================ */
+
+.border-glow {
+  position: relative;
+  border: 1px solid hsl(165 80% 50% / 0.2);
+  transition: all var(--duration-base) var(--timing-ease-in-out);
+}
+
+.border-glow:hover {
+  border-color: hsl(165 80% 50% / 0.4);
+  box-shadow: 
+    0 0 15px hsl(165 80% 50% / 0.3),
+    inset 0 0 15px hsl(165 80% 50% / 0.05),
+    0 0 30px hsl(165 80% 50% / 0.15);
+}
+
+.card-glow {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  animation: border-pulse 3s ease-in-out infinite;
+}
+
+/* ============================================
+   7. BUTTON STYLES
+   ============================================ */
+
+.btn-base {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-base) var(--timing-ease-in-out);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    hsl(165 80% 50%),
+    hsl(280 70% 60%)
+  );
+  color: var(--bg-primary);
+  box-shadow: var(--glow-primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-primary-lg);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fg-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: hsl(165 80% 50% / 0.4);
+}
+
+/* ============================================
+   8. ANIMATIONS
+   ============================================ */
+
+@keyframes pulse-glow-primary {
+  0%, 100% {
+    box-shadow: 
+      0 0 40px -8px hsl(165 80% 50% / 0.5),
+      0 0 80px -16px hsl(165 80% 50% / 0.25),
+      0 0 120px -20px hsl(165 80% 50% / 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 60px -5px hsl(165 80% 50% / 0.6),
+      0 0 100px -10px hsl(165 80% 50% / 0.35),
+      0 0 150px -15px hsl(165 80% 50% / 0.15);
+  }
+}
+
+@keyframes pulse-glow-accent {
+  0%, 100% {
+    box-shadow: 
+      0 0 40px -8px hsl(280 70% 60% / 0.45),
+      0 0 80px -16px hsl(280 70% 60% / 0.2),
+      0 0 120px -20px hsl(280 70% 60% / 0.08);
+  }
+  50% {
+    box-shadow: 
+      0 0 60px -5px hsl(280 70% 60% / 0.55),
+      0 0 100px -10px hsl(280 70% 60% / 0.28),
+      0 0 150px -15px hsl(280 70% 60% / 0.12);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px hsl(165 80% 50% / 0.8),
+      0 0 20px hsl(165 80% 50% / 0.6),
+      0 0 30px hsl(280 70% 60% / 0.4),
+      0 0 40px hsl(280 70% 60% / 0.2);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px hsl(165 80% 50% / 1),
+      0 0 30px hsl(165 80% 50% / 0.8),
+      0 0 45px hsl(280 70% 60% / 0.6),
+      0 0 60px hsl(280 70% 60% / 0.3);
+  }
+}
+
+@keyframes border-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px hsl(165 80% 50% / 0.2), inset 0 0 10px hsl(165 80% 50% / 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px hsl(165 80% 50% / 0.4), inset 0 0 15px hsl(165 80% 50% / 0.1);
+  }
+}
+
+@keyframes glow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ============================================
+   9. CONTAINER STYLES
+   ============================================ */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 var(--spacing-3xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* ============================================
+   10. UTILITY CLASSES
+   ============================================ */
+
+.section-padding {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+  }
+}
+
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   11. RESPONSIVE GRID SYSTEM
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ============================================
+   12. FLEXBOX UTILITIES
+   ============================================ */
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: var(--spacing-xs);
+}
+
+.gap-2 {
+  gap: var(--spacing-sm);
+}
+
+.gap-4 {
+  gap: var(--spacing-md);
+}
+
+.gap-6 {
+  gap: var(--spacing-lg);
+}
+
+/* ============================================
+   13. DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--fg-primary);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+}
