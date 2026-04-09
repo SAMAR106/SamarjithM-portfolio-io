@@ -1,6 +1,6 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowUpRight, X, CheckCircle, AlertTriangle, Lightbulb } from "lucide-react";
+import { ArrowUpRight, X, CheckCircle, AlertTriangle, Lightbulb, Github } from "lucide-react";
 
 const projects = [
   {
@@ -9,6 +9,7 @@ const projects = [
     solution: "Built AI-based system to automate patient interaction and data handling, reducing processing time significantly.",
     tech: ["Python", "AI Models", "APIs"],
     accent: "from-primary/20 to-primary/5",
+    github: "https://github.com/SAMAR106/Healthcare",
     details: {
       overview: "An end-to-end AI-powered healthcare automation platform that streamlines patient data processing, appointment management, and clinical decision support.",
       challenges: [
@@ -33,6 +34,7 @@ const projects = [
     solution: "Voice-controlled system to automate home devices with natural language commands and real-time responses.",
     tech: ["Python", "IoT", "Speech Recognition"],
     accent: "from-accent/20 to-accent/5",
+    github: "https://github.com/SAMAR106/home-automation-use-simple-vocie-agent",
     details: {
       overview: "A smart home voice assistant that understands natural language commands to control IoT devices, set routines, and provide real-time feedback.",
       challenges: [
@@ -57,6 +59,7 @@ const projects = [
     solution: "NLP-powered chatbot that answers college queries instantly — admissions, schedules, and campus info.",
     tech: ["NLP", "Python", "Flask"],
     accent: "from-primary/15 to-accent/10",
+    github: "https://github.com/deepaklatha1906-ctrl/College-chatbot",
     details: {
       overview: "An intelligent conversational chatbot deployed for a college campus, capable of answering FAQs about admissions, courses, faculty, events, and campus facilities.",
       challenges: [
@@ -81,6 +84,7 @@ const projects = [
     solution: "Telegram bot handling auto-replies, scheduled alerts, and custom commands for seamless communication.",
     tech: ["Telegram API", "Python", "Webhooks"],
     accent: "from-accent/15 to-primary/10",
+    github: "https://github.com/SAMAR106/telegram-chatbot",
     details: {
       overview: "A feature-rich Telegram bot designed for automated communication, capable of handling scheduled messages, custom commands, and intelligent auto-replies.",
       challenges: [
@@ -150,13 +154,24 @@ const ProjectModal = ({
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mt-1">
             {project.title}
           </h3>
-          <div className="flex gap-4 mt-3 text-xs text-muted-foreground">
+          <div className="flex gap-4 mt-3 text-xs text-muted-foreground flex-wrap">
             <span>
               <span className="text-primary font-semibold">Role:</span> {project.details.role}
             </span>
             <span>
               <span className="text-primary font-semibold">Duration:</span> {project.details.duration}
             </span>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border border-primary/40 text-primary hover:border-primary/80 hover:bg-primary/10 transition-all"
+              >
+                <Github className="w-3.5 h-3.5" />
+                View on GitHub
+              </a>
+            )}
           </div>
         </div>
 
@@ -303,6 +318,19 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 rounded-lg border border-primary/40 text-primary text-xs font-semibold hover:border-primary/80 hover:bg-primary/10 transition-all relative z-10"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    View Code
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
